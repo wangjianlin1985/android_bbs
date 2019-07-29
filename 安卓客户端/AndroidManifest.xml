@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="CollegeListActivity"></activity>
+        <activity android:name="CollegeQueryActivity"></activity>
+        <activity android:name="CollegeAddActivity"></activity>
+        <activity android:name="CollegeEditActivity"></activity>
+        <activity android:name="CollegeDetailActivity"></activity>
+        <activity android:name="SpecialInfoListActivity"></activity>
+        <activity android:name="SpecialInfoQueryActivity"></activity>
+        <activity android:name="SpecialInfoAddActivity"></activity>
+        <activity android:name="SpecialInfoEditActivity"></activity>
+        <activity android:name="SpecialInfoDetailActivity"></activity>
+        <activity android:name="StudentListActivity"></activity>
+        <activity android:name="StudentQueryActivity"></activity>
+        <activity android:name="StudentAddActivity"></activity>
+        <activity android:name="StudentEditActivity"></activity>
+        <activity android:name="StudentDetailActivity"></activity>
+        <activity android:name="TopicClassListActivity"></activity>
+        <activity android:name="TopicClassQueryActivity"></activity>
+        <activity android:name="TopicClassAddActivity"></activity>
+        <activity android:name="TopicClassEditActivity"></activity>
+        <activity android:name="TopicClassDetailActivity"></activity>
+        <activity android:name="TopicListActivity"></activity>
+        <activity android:name="TopicQueryActivity"></activity>
+        <activity android:name="TopicAddActivity"></activity>
+        <activity android:name="TopicEditActivity"></activity>
+        <activity android:name="TopicDetailActivity"></activity>
+        <activity android:name="ThumbUpListActivity"></activity>
+        <activity android:name="ThumbUpQueryActivity"></activity>
+        <activity android:name="ThumbUpAddActivity"></activity>
+        <activity android:name="ThumbUpEditActivity"></activity>
+        <activity android:name="ThumbUpDetailActivity"></activity>
+        <activity android:name="CommentListActivity"></activity>
+        <activity android:name="CommentQueryActivity"></activity>
+        <activity android:name="CommentAddActivity"></activity>
+        <activity android:name="CommentEditActivity"></activity>
+        <activity android:name="CommentDetailActivity"></activity>
+        <activity android:name="FriendListActivity"></activity>
+        <activity android:name="FriendQueryActivity"></activity>
+        <activity android:name="FriendAddActivity"></activity>
+        <activity android:name="FriendEditActivity"></activity>
+        <activity android:name="FriendDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>

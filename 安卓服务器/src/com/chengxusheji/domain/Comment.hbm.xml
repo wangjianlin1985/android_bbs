@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Comment" table="Comment">
+
+          <!-- 主键记录编号 -->
+          <id name="commentId" column="commentId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 评论的话题 -->
+          <many-to-one name="topicObj"
+            column="topicObj"
+            class="Topic"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 评论内容 -->
+          <property
+            name="content"
+            column="content"
+            type="string"
+            length="300"
+          />
+
+          <!-- 多对一属性: 评论的学生 -->
+          <many-to-one name="studentObj"
+            column="studentObj"
+            class="Student"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 评论时间 -->
+          <property
+            name="commentTime"
+            column="commentTime"
+            type="string"
+            length="30"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
