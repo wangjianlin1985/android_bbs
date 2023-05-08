@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Friend" table="Friend">
+
+          <!-- 主键记录编号 -->
+          <id name="friendId" column="friendId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 学生1 -->
+          <many-to-one name="studentObj1"
+            column="studentObj1"
+            class="Student"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 好友 -->
+          <many-to-one name="studentObj2"
+            column="studentObj2"
+            class="Student"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 添加时间 -->
+          <property
+            name="addTime"
+            column="addTime"
+            type="string"
+            length="30"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

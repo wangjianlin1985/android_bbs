@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Topic" table="Topic">
+
+          <!-- 主键话题id -->
+          <id name="topicId" column="topicId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 标题 -->
+          <property
+            name="title"
+            column="title"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 话题类别 -->
+          <many-to-one name="topicClass"
+            column="topicClass"
+            class="TopicClass"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单图片属性: 话题图片 -->
+          <property
+            name="photo"
+            column="photo"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 内容 -->
+          <property
+            name="content"
+            column="content"
+            type="string"
+            length="500"
+          />
+
+          <!-- 多对一属性: 学生 -->
+          <many-to-one name="studentObj"
+            column="studentObj"
+            class="Student"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 发布时间 -->
+          <property
+            name="addTime"
+            column="addTime"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
